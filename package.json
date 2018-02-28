@@ -1,0 +1,56 @@
+{
+  "name": "pruebas-iniciales",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauSalarich/pruebas-iniciales.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PauSalarich/pruebas-iniciales/issues"
+  },
+  "homepage": "https://github.com/PauSalarich/pruebas-iniciales#readme",
+  "devDependencies": {
+    "@haztivity/cli": "^0.3.0",
+    "@types/core-js": "^0.9.44",
+    "@types/jquery": "^3.2.17",
+    "@types/jqueryui": "^1.12.0",
+    "@types/loglevel": "^1.5.3",
+    "@types/string": "0.0.29",
+    "@types/velocity-animate": "^1.2.31",
+    "ftp-deploy": "^1.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.0",
+    "gulp-debug": "^3.2.0",
+    "gulp-prompt": "^1.0.1",
+    "gulp-replace": "^0.6.1",
+    "jquery-ui": "^1.12.1",
+    "pug": "^2.0.0-rc.4",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@haztivity/core": "^0.6.13",
+    "@haztivity/hz-anim": "^0.6.4",
+    "@haztivity/hz-carousel": "^0.6.4",
+    "@haztivity/hz-dialog": "^0.6.10",
+    "@haztivity/hz-fillgaps": "^0.6.3",
+    "@haztivity/hz-header": "^0.6.3",
+    "@haztivity/hz-navbar": "^0.6.5",
+    "@haztivity/hz-quiz": "^0.6.7",
+    "@haztivity/hz-soupletter": "^0.6.7",
+    "@haztivity/hz-tabs": "^0.6.2",
+    "@haztivity/hz-tooltip": "^0.6.3",
+    "@haztivity/hz-tooltipstered-image": "^0.6.0",
+    "animate.css": "^3.5.2",
+    "flexboxgrid": "^6.3.1",
+    "jq-questionnaire": "^0.3.0",
+    "jq-quiz": "^0.6.3",
+    "jquery-ui-touch-punch-c": "^1.4.0"
+  }
+}

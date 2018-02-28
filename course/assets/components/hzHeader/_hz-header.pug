@@ -1,0 +1,22 @@
+include ../_globalStructure/_globalStructure
+mixin hz-header(params,titleParams)
+    +_mod-baseContent__header({
+        internalParams: {
+            cssClass: "hz-header",
+            attributes: {
+                "data-hz-component": "HzHeader"
+            }
+        },
+        externalParams: params
+    })
+        -titleParams = titleParams ||{};
+        -titleParams.level = titleParams.level || 1;
+        +_mod-baseContent__title({
+            internalParams: {
+                cssClass: "hz-header__title",
+                attributes: {
+                    "data-hz-header-title": ""
+                }
+            },
+            externalParams: titleParams
+        })

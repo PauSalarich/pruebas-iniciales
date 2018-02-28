@@ -1,0 +1,23 @@
+include ../../components/_globalStructure/_globalStructure
+include _mod-content__paragraph
+mixin mod-content(params)
+    -
+        params = params || {};
+    +_mod-baseContent__tag({
+        internalParams:{
+            cssClass:"mod-content"+(params.theme != undefined? " mod-content--theme-"+params.theme : "")+(params.fill ? " mod-content--fill" :""),
+            allowContent:true
+        },
+        externalParams:params
+    })&attributes(attributes)
+        if(params.items)
+            each item in params.items
+                -
+                    if(typeof item == "string"){
+                        item = {
+                            content:item
+                        };
+                    }
+                    item.size = item.size || params.size
+                +mod-content__paragraph(item)
+        block

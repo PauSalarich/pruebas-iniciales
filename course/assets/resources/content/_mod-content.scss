@@ -1,0 +1,40 @@
+//********************************************
+//* Project: english-for-travel
+//* File: _mod-content
+//* Description:
+//*********************************************
+/* _mod-content */
+.mod-content{
+    $TC-content:$PC-cromatic__text--medium;
+    $TC-content--theme-2:$PC-cromatic__2;
+    .mod-content__paragraph{
+        color:$TC-content;
+        font:{
+            size:em(18);
+            weight:100;
+        }
+        +.mod-content__paragraph{
+            padding-top:em(6,18);
+        }
+    }
+    .mod-content--title{
+        font-size:rem(20);
+    }
+    .mod-content--headline{
+        font-size:rem(32);
+    }
+    &.mod-content--theme-2{
+        .mod-content__paragraph{
+            color:$TC-content--theme-2;
+        }
+    }
+    &.mod-content--fill{
+        display: flex;
+        flex-direction: column;
+        flex-grow:1;
+        .mod-content__paragraph{
+            margin:auto 0;
+        }
+    }
+}
+/* End _mod-content */

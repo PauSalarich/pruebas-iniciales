@@ -1,0 +1,14 @@
+include ../../components/_globalStructure/_globalStructure
+mixin mod-list(params)
+    -
+        var params = params || {};
+    +_mod-baseContent({
+        internalParams:{
+            cssClass:"mod-list"+(params.theme ? " mod-list--"+params.theme:"")
+        },
+        externalParams:params
+    })&attributes(attributes)
+        if(params.items)
+            each item in params.items
+                li.mod-list__item(class=params.itemCssClass)!= item
+        block

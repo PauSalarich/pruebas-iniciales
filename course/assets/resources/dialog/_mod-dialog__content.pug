@@ -1,0 +1,13 @@
+include ../../components/_globalStructure/_globalStructure
+mixin mod-dialog__content(params)
+    -
+        params = params || {};
+        params.tag = params.tag || "p";
+    +_mod-baseContent__tag({
+        internalParams: {
+            cssClass: "mod-dialog__content",
+            ignoreContent: false
+        },
+        externalParams: params
+    })&attributes(attributes)
+        block

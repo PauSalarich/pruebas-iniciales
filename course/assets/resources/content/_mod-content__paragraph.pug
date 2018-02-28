@@ -1,0 +1,13 @@
+include ../../components/_globalStructure/_globalStructure
+mixin mod-content__paragraph(params)
+    -
+        params = params || {};
+        params.tag = params.tag || "p";
+    +_mod-baseContent__tag({
+        internalParams:{
+            cssClass:"mod-content__paragraph "+ (params.size ? " mod-content--" + params.size : ""),
+            ignoreContent:false
+        },
+        externalParams:params
+    })&attributes(attributes)
+        block

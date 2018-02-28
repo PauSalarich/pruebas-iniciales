@@ -1,0 +1,221 @@
+.questionnaire {
+  background-color: transparent;
+  color: $PC__text__primary__color;
+
+  .cap {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: em(30);
+    padding: em(10);
+  }
+  .tags {
+    display: flex;
+    justify-content: center;
+    margin-bottom: em(20);
+
+    & > div {
+      flex-grow: 1;
+      background-color: $PC__light__primary__color;
+      width: em(100);
+      padding: em(5);
+      border-radius: em(5);
+      text-align: center;
+      margin: 0 em(10);
+      color: $PC__accent__color;
+
+    }
+    .current {
+      background-color: $PC__accent__color;
+      color: $PC__text__primary__color;
+    }
+  }
+
+  .jq-quiz {
+
+
+
+    .quiz_finished{
+      display:none;
+      color: $PC__accent__color;
+      text-align: center;
+      background-color: #fff;
+      border-radius:em(10);
+      margin: em(20);
+      padding: em(20);
+    }
+
+    .jq-quiz__end {
+      display: none;
+    }
+    .jq-quiz__header {
+      margin: em(30);
+    }
+    .jq-quiz__title {
+      font-size: em(20);
+      text-align: center;
+      margin-bottom: em(20);
+    }
+    .jq-quiz__description {
+      margin-bottom: em(30);
+      font-size: em(20);
+      .img_description {
+        text-align: center;
+        margin-bottom: em(20);
+      }
+      .aviso{
+        border-radius: em(5);
+        text-align: center;
+        padding: em(10);
+        margin: em(10);
+        background-color: #fff;
+        font-size: em(10);
+        color:#c0504d;
+      }
+    }
+
+    .jq-quiz__properties {
+      display: none;
+    }
+
+    .jq-quiz__statement {
+      font-size: em(30);
+      text-align: center;
+      padding: em(20) em(10);
+    }
+    .jq-quiz__question {
+      .jq-quiz__feedback {
+        background-color: #fff;
+        color: #0097A7;
+        text-align: center;
+      }
+    }
+    .jq-quiz__options {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: em(20);
+    }
+    .jq-quiz__option {
+      align-self: center;
+    }
+    .jq-quiz__option-label {
+      flex-grow: 1;
+      display: block;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: em(5);
+      padding: em(5);
+      margin: em(5);
+      width: em(200);
+      font-size: em(20);
+
+    }
+    .jq-quiz--correct {
+      label {
+        border: 3px solid $PC__accent__color;
+        &:after {
+          content: '\f00c';
+          font-family: FontAwesome;
+          padding-left: em(10);
+        }
+      }
+    }
+
+    .jq-quiz--incorrect {
+      label {
+        border: 3px solid red;
+        &:after {
+          content: '\f088';
+          font-family: FontAwesome;
+          padding-left: em(10);
+        }
+      }
+    }
+    [data-jq-quiz-feedback='ok'] {
+      display: block;
+    }
+    .jq-quiz__option-field {
+      display: none;
+    }
+    .jq-quiz__actions {
+
+      display: flex;
+      justify-content: center;
+      margin: em(16) 0;
+    }
+    .jq-quiz__action {
+      flex-grow: 1;
+      border: 0px;
+      background-color: transparent;
+      text-align: center;
+      font-size: em(20);
+      color: $PC__text__primary__color;
+      &:after,
+      &:before {
+        font-family: FontAwesome;
+      }
+      &[data-jq-quiz-start] {
+        font-size: em(40);
+        &:after {
+          content: '\f08b';
+          padding-left: em(10);
+        }
+      }
+
+      &[data-jq-quiz-prev] {
+        &:before {
+          content: '\f053';
+          margin-right: em(5);
+        }
+      }
+
+      &[data-jq-quiz-next] {
+        &:after {
+          content: '\f054';
+          margin-left: em(5);
+        }
+      }
+
+      &[data-jq-quiz-end] {
+        display: none;
+        &:after {
+          content: '\f204';
+          margin-left: em(5);
+
+        }
+      }
+      &[disabled] {
+        opacity: 0.2;
+      }
+    }
+    &.jq-quiz--last-question {
+      .jq-quiz__prev,
+      .jq-quiz__next {
+        display: none;
+      }
+      .jq-quiz__end {
+        display: block;
+      }
+    }
+    &.hz-resource--completed {
+      .jq-quiz__start {
+        display: none;
+      }
+        .jq-quiz__description {
+          display: none;
+        }
+      .quiz_finished{
+        display: block;
+      }
+    }
+  }
+
+}
+
+.ui-dialog-titlebar{
+  background-color: $PC__light__primary__color;
+}
+
+body .ui-dialog .ui-dialog-titlebar{
+  background-color: #7bc0e9;
+}

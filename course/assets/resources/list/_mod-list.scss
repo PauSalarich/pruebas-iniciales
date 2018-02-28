@@ -1,0 +1,38 @@
+//********************************************
+//* Project: english-for-travel
+//* File: _mod-list
+//* Description:
+//*********************************************
+/* _mod-list */
+.mod-list{
+    list-style: none;
+    padding:0;
+    $TC-primary:$PC-cromatic__text--dark;
+    $TC-primary__arrow:$PC-cromatic__3;
+    .mod-list__item{
+        position: relative;
+        padding-left:em(16);
+        margin-top:em(8);
+        &:before{
+            content:"\f0da";
+            font:{
+                family:FontAwesome;
+            }
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        &:first-child{
+            margin-top:0;
+        }
+    }
+    &.mod-list--primary{
+        .mod-list__item{
+            color:$TC-primary;
+            &:before{
+                color:$TC-primary__arrow;
+            }
+        }
+    }
+}
+/* End _mod-list */

@@ -1,0 +1,16 @@
+include ../../components/_globalStructure/_globalStructure
+mixin mod-title(params)
+    -
+        params = params || {};
+        var size = params.size || 1;
+    +_mod-baseContent__title({
+        internalParams:{
+            cssClass:"mod-title mod-title--size-"+size
+        },
+        externalParams:params
+    })&attributes(attributes)
+        if(params.content)
+            span.mod-title__content!= params.content
+            block
+        else
+            block

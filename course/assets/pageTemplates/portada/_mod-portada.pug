@@ -1,0 +1,11 @@
+include ../../components/_globalStructure/_globalStructure
+mixin mod-portada(params)
+    -
+      params = params || {};
+    div.mod-portada
+        div.container-fluid.page-container
+            div.portada_capitulo.js_animate
+                div
+                    i.fa.fa-commenting-o
+                div=params.name
+            img.js_animate(src='pages/'+params.pagina+'/assets/fondo.png')

@@ -1,0 +1,69 @@
+//********************************************
+//* Project: accedemercadolaboral
+//* File: _jq-tooltipstered-image
+//* Description:
+//*********************************************
+/* _jq-tooltipstered-image */
+.tooltipstered-image{
+    //********************************************
+    //* Project: jq-tooltipstered-image
+    //* File: main
+    //* Description:
+    //*********************************************
+    /* main */
+    @-webkit-keyframes tip {
+        0%{
+            stroke-opacity: 0.4;
+            stroke-width: 4;
+        }
+        50%{
+            stroke-opacity: 1;
+            stroke-width: 8;
+        }
+        100%{
+            stroke-opacity: 0.4;
+            stroke-width: 4;
+        }
+    }
+    .tooltipstered-image__step{
+        /*Override inline properties*/
+        fill:transparent !important;
+        stroke: #D53535;
+        stroke-width: 4;
+        stroke-dasharray: 5,5;
+        stroke-opacity: 0.4;
+        transition:all 400ms ease;
+        cursor:pointer;
+        &.tooltipstered-image__step--current{
+            animation:tip 1s linear infinite;
+        }
+        &.tooltipstered-image__step--completed{
+            stroke-dasharray: none;
+            stroke: #00ff00;
+            stroke-opacity: 0.6;
+        }
+        &.tooltipstered-image__step--waiting{
+            cursor:default;
+        }
+        &.tooltipstered-image__step--open{
+            stroke-opacity: 1;
+        }
+    }
+
+}
+
+.tooltipster-base{
+    .tooltipstered-image__template{
+        display: inherit;
+    }
+    &.small{
+        font-size:em(16);
+        p+p{
+            padding-top:em(8);
+        }
+    }
+}
+.tooltipstered-image__template{
+    display: none;
+}
+/* End _jq-tooltipstered-image */

@@ -1,0 +1,36 @@
+//********************************************
+//* Project: english-for-travel
+//* File: _mod-title
+//* Description:
+//*********************************************
+/* _mod-title */
+.mod-title{
+    $TC-title--size-1:$PC-cromatic__9;
+    $TC-title--size-2:$PC-cromatic__text--dark;
+    $TC-title--size-3:$PC-cromatic__text--medium;
+    &.mod-title--size-1{
+        font:{
+            size:em(44);
+        }
+        text-transform: uppercase;
+        line-height: em(41,44);
+        color:$TC-title--size-1;
+    }
+    &.mod-title--size-2{
+        font:{
+            size:em(30);
+            family:Vectora;
+        }
+        line-height: em(28,30);
+        color:$TC-title--size-2;
+    }
+    &.mod-title--size-3{
+        font:{
+            size:em(24);
+            family: Vectora;
+        }
+        line-height: em(28,24);
+        color:$TC-title--size-3;
+    }
+}
+/* End _mod-title */

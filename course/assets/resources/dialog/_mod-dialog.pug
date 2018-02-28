@@ -1,0 +1,31 @@
+include ../../components/_globalStructure/_globalStructure
+include ./_mod-dialog__content
+mixin mod-dialog(params)
+    -
+        var params = params || {};
+        if(params.tip == true){
+            params.arrow = true;
+            params.closeOnEscape = false;
+            params.close = false;
+        }
+    +_mod-baseContent({
+        internalParams:{
+            cssClass:"mod-dialog",
+            attributes:{
+                "data-hz-resource":"HzDialog",
+                "data-opt-hz-dialog-trigger":params.trigger,
+                "data-opt-hz-dialog-modal":params.modal != undefined ?params.modal.toString():false,
+                "data-opt-hz-dialog-auto-open":params.autoOpen,
+                "data-opt-hz-dialog-title":params.title,
+                "data-opt-hz-dialog-height":params.height,
+                "data-opt-hz-dialog-width":params.width,
+                "data-opt-hz-dialog-position":params.position,
+                "data-opt-hz-dialog-close-on-escape":params.closeOnEscape,
+                "data-opt-hz-dialog-show":params.show,
+                "data-opt-hz-dialog-append-to":params.appendTo,
+                "data-opt-hz-dialog-dialog-class":(params.arrow == true ? "mod-dialog--arrow": "")+(params.title == undefined ? " mod-dialog--no-header":"")+(params.close == false ? " mod-dialog--no-close":"")+(params.tip == true ? " mod-dialog--tip":"")
+            }
+        },
+        externalParams:params
+    })&attributes(attributes)
+        block

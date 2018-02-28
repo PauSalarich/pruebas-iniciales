@@ -1,0 +1,244 @@
+@import "../assets/styles/common";
+@import "../assets/styles/common/reset";
+@import "../assets/styles/common/fonts";
+
+/* End common */
+/* Common components */
+@import "../assets/components/viewer/viewer";
+@import "../assets/components/hzHeader/hz-header";
+@import "../assets/components/hzNavbar/hz-navbar";
+@import "~jq-fillgaps/src/assets/styles/fillgaps";
+@import "~@haztivity/hz-soupletter/src/assets/styles/wordfind";
+body {
+    min-height: 100vh;
+    height: 100vh;
+    overflow:hidden;
+    background-color: $PC__default__primary__color;
+    font-size:16px;
+}
+
+
+.title {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', sans-serif;
+
+  span {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+.intro {
+  padding: 20px;
+  color: #fff;
+}
+
+.hide {
+    display: none;
+}
+[data-hz-pages] {
+    flex-grow: 1;
+    overflow: auto;
+    position: relative;
+    //display: flex;
+}
+.hz-page{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    min-height: calc(100vh - 3.4em);
+}
+/* End common components */
+
+/* Common pages */
+/*****/
+.points{
+  display:flex;
+  margin-top:1em;
+
+  div {
+     width: 100%;
+   height: 1em;
+    border-radius: 0.5em;
+    background-color: #0C9D30;
+    flex-grow: 1;
+    margin: 0em 2em;
+    /*
+         &:after {
+           content: '\f072';
+           font-family: FontAwesome;
+           font-size: 2em;
+           color:#fff;
+           text-align:center;
+           align-self: center;
+
+         }*/
+
+  }
+  .current{
+    background-color:#fff;
+  }
+  .before{
+    background-color:#f4f4f4;
+  }
+
+  .next{
+    background-color:#0097A7;
+  }
+
+}
+
+.header {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 0.7em;
+  p {
+    font-size: 0.5em;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+/****/
+.header-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  padding: em(10) em(5) em(5) em(5);
+  color:#fff;
+
+  p {
+    font-size: 0.5em;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+
+/******/
+.slick-slide {
+  margin: em(20);
+  height: em(390);
+  margin-left: em(50);
+  h1 {
+    font-size: em(26);
+    text-align: center;
+    margin-bottom: em(20);
+  }
+  p {
+    font-size: em(18);
+  }
+  .img {
+    margin: em(20) em(20) 0 em(20);
+    display: flex;
+    justify-content: center;
+
+    img {
+      border-radius: em(5);
+    }
+  }
+}
+
+.slick-slider {
+
+  .slick-arrow {
+    background-color: transparent;
+    border: 0px;
+    color: $PC__text__primary__color;
+
+  }
+
+  .slick-disabled {
+    color: $PC__default__primary__color;
+  }
+
+  .slick-prev {
+    padding: em(10);
+    border-bottom: 1px dotted $PC__text__primary__color;
+    &:before {
+      content: '\f053';
+      font-family: FontAwesome;
+      margin-right: em(5);
+
+    }
+  }
+
+  .slick-next {
+
+    float: right;
+    padding: em(10);
+    border-top: 1px dotted $PC__text__primary__color;
+
+    &:after {
+      content: '\f054';
+      font-family: FontAwesome;
+      margin-left: em(5);
+    }
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: em(10);
+  margin-top: em(10);
+
+  .slick-active {
+    button {
+      background-color:#0097A7;
+      color: #fff;
+
+    }
+  }
+
+  button {
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: em(5);
+    text-align: center;
+    border: 0px;
+    width: em(30);
+    margin-bottom: em(10);
+    font-size: em(10);
+    padding:em(5);
+    opacity:0.9;
+  }
+}
+
+/**********/
+/* End common pages */
+/* Components */
+@import "~@haztivity/hz-navbar/src/scss/hz-navbar.structure";
+@import "~@haztivity/hz-navbar/src/scss/hz-navbar.theme";
+
+@include hz-navbar__theme-maker(
+        $BC-navbar: $PC__dark__primary__color,
+        $TC-bar: #fff,
+        $TC-home: #fff,
+        $TC-index: #fff,
+        $TC-pager-btn: #fff,
+        $TC-pager-pages: #fff,
+        $BC-bar: #999,
+        $BC-bar-value: #ddd
+)
+
+@import '~@haztivity/hz-carousel/src/assets/styles/hz-carousel.structure';
+@import '~@haztivity/hz-tooltip/src/styles/themes/hz-tooltip-default.scss';
+@import '../assets/resources/tooltipster/tooltipster';
+@import "../assets/resources/list/_mod-list";
+@import "../assets/resources/dialog/_mod-dialog";
+@import "../assets/resources/content/_mod-content";
+@import "../assets/resources/pageContainer/page-container";
+@import "../assets/resources/jq-questionnaire/jq-questionnaire";
+@import "../assets/resources/jq-quiz/jq-quiz";
+@import "../assets/resources/jq-tooltipstered-image/jq-tooltipstered-image";
+@import "../assets/resources/ballon/ballon";
+/* End components */

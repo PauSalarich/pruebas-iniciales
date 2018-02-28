@@ -1,0 +1,39 @@
+//********************************************
+//* Project: english-for-travel
+//* File: _hz-navbar
+//* Description:
+//*********************************************
+/* _hz-navbar */
+body {
+  .hz-navbar {
+    min-height: 3.4em;
+    .hz-navbar__container {
+      flex-grow: 1;
+    }
+    .hz-navbar__pages{
+      align-self: center;
+    }
+    .hz-navbar__actions {
+      width: auto;
+      flex-grow: 1;
+      display: flex;
+      .hz-navbar__action-home{
+        margin-left:10%;
+      }
+      .hz-navbar__action-exit{
+        margin-right:10%;
+        &:after{
+          content:'\f08b';
+          font-family: FontAwesome;
+        }
+      }
+    }
+    .hz-navbar__pager {
+      width: auto;
+      justify-content: flex-start;
+    }
+
+  }
+}
+
+/* End _hz-navbar */

@@ -1,0 +1,50 @@
+//********************************************
+//* Project: conversando-en-digital
+//* File: page.scss
+//* Description:
+//*********************************************
+/* 76947*/
+@import "../../../assets/styles/common";
+.hz-page-7187 {
+  background-color: #fff;
+  font-size: 1.5em;
+  color: #000;
+  font-family: 'Josefin Sans', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+
+  .container {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+    height: 100vh;
+    text-align: left;
+
+
+
+    p {
+      width: 100vh;
+      padding: em(50) em(20);
+      background-color: #84bebf;
+      i{
+        padding-right: em(10);
+        font-size: em(30);
+      }
+  }
+
+  .imagen {
+    text-align: center;
+  }
+  .icono {
+    padding: em(10) em(5) em(10) em(5);
+    text-align: center;
+    &:before {
+      content: '\f00b';
+      font-family: FontAwesome;
+      font-size: em(20);
+      color: #999;
+
+    }
+  }
+}
+
+/* End 7697 */

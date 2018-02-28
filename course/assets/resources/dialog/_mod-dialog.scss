@@ -1,0 +1,105 @@
+//********************************************
+//* Project: english-for-travel
+//* File: _mod-dialog
+//* Description:
+//*********************************************
+/* _mod-dialog */
+body{
+    .ui-widget-overlay{
+        background-color:#000;
+        opacity:0.6;
+    }
+    .ui-dialog{
+        $BC-dialog:$PC-cromatic__7;
+        $BC-dialog__header:$PC-cromatic__5;
+        $TC-close:$PC-cromatic__7;
+        $TC-title:$PC-cromatic__7;
+        padding:0;
+        background-color:$BC-dialog;
+        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+
+        .ui-dialog-titlebar{
+            background-color:$BC-dialog__header;
+        }
+        .ui-dialog-titlebar-close{
+            padding:0;
+            overflow: hidden;
+            outline: none;
+            background:none;
+            border:none;
+            &:before{
+                content:"\f00d";
+                display: block;
+                height: 100%;
+                width: 100%;
+                color:$TC-close;
+                cursor: pointer;
+                font:{
+                    family:FontAwesome;
+                    size:em(18);
+                }
+            }
+        }
+        .ui-dialog-title{
+            font:{
+                weight:bold;
+                size:em(18);
+            }
+            color:$TC-title;
+        }
+        .mod-dialog__content{
+            font:{
+                weight:100;
+                size:em(16);
+            }
+            *{
+                font-weight:100;
+            }
+            strong{
+                font-weight:bold;
+            }
+            +.mod-dialog__content{
+                padding-top:em(8,16);
+            }
+        }
+        &.mod-dialog--arrow{
+            &:after {
+                content: "\f0d7";
+                display: block;
+                position: absolute;
+                font-family: FontAwesome;
+                top: 97%;
+                left: 50%;
+                line-height: em(21,60);
+                font-size: em(60);
+                margin-left: em(-18,60);
+                text-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+                color: $BC-dialog;
+            }
+        }
+        &.mod-dialog--no-close{
+            .ui-dialog-titlebar-close{
+                display: none;
+            }
+        }
+        &.mod-dialog--no-header {
+            .ui-dialog-titlebar {
+                display: none;
+            }
+        }
+        &.mod-dialog--tip{
+            .ui-dialog-title{
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+            }
+            .mod-dialog__content{
+                font:{
+                    size:em(20);
+                }
+                text-align: center;
+            }
+        }
+    }
+}
+/* End _mod-dialog */

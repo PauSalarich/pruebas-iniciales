@@ -1,0 +1,52 @@
+//********************************************
+//* Project: curso-prl
+//* File: _fonts
+//* Description:
+//*********************************************
+/* _fonts */
+/* JosefinSans */
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-Regular.ttf");
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-Black.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-BlackItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-Light.ttf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: JosefinSans;
+    src: url("../assets/fonts/JosefinSans/ttf/JosefinSans-LightItalic.ttf");
+    font-weight: 100;
+    font-style: italic;
+}
+/*End JosefinSans*/
+ 
+/* End _fonts */

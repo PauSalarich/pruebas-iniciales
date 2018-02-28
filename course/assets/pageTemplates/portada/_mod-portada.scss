@@ -1,0 +1,39 @@
+//********************************************
+//* Project: haztivity
+//* File: _mod-portada
+//* Description:
+//*********************************************
+/* _mod-title */
+.mod-portada{
+    background-color: #fff;
+    font-size: 1.5em;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    display:flex;
+    flex-grow:1;
+.js_animate{
+    opacity: 0;
+}
+    .container-fluid {
+        display: flex; /* or inline-flex */
+        flex-direction: column;
+        text-align: left;
+
+        .portada_capitulo {
+            div{
+                text-align: center;
+
+            i{
+                padding-bottom: 1rem;
+                font-size: 2rem;
+            }
+            }
+        }
+    }
+
+    .imagen {
+        text-align: center;
+    }
+
+}
+/* End _mod-title */

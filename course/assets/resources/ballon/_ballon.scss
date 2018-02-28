@@ -1,0 +1,72 @@
+.ballon{
+    .ballon_text {
+        font-size: 1em;
+        background-color: #fff;
+        width: 75%;
+        margin: 10px 10px 0 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    &.ballon_drch{
+        .ballon_text {
+            width: 75%;
+            margin: 10px 20px 0 10px;
+            float: right;
+            span {
+                padding: 3px;
+            }
+            .fa {
+                color: #0097a7;
+                cursor: pointer;
+            }
+
+        }
+        &:after{
+            clear:both;
+            background-image: url(../assets/images/balloon-drch.png);
+            margin-left: 78%;
+        }
+    }
+    &.ballon_avatar{
+        min-height: 100px;
+        padding-left: 101px;
+        background-position-x: 100px;
+        position: relative;
+        &:before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-size: 100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &.ballon_avatar_vicky:before{
+            background-image: url(../assets/images/avatars/vicky.png);
+        }
+        &.ballon_avatar_nacho:before{
+            background-image: url(../assets/images/avatars/nacho.png);
+        }
+        &.ballon_drch{
+            padding-left:0;
+            padding-right: 101px;
+            background-position-x: calc(100% - 100px);
+            &:before{
+                left:initial;
+                right:0;
+            }
+        }
+    }
+    &:after {
+        content: "";
+        background-image: url(../assets/images/balloon-izq.png);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        height: 9px;
+        width: 74px;
+        display: block;
+    }
+}
